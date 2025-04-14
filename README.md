@@ -1,6 +1,7 @@
 # <img src="public/images/logo.svg" alt="React2Tech Logo" width="30" height="30" style="vertical-align: middle;"> React2Tech
 
-React2Tech is an interactive React quiz application designed to help developers test and improve their React knowledge. All the quiz questions and explanations in this application were generated with the assistance of AI and have not been thoroughly reviewed, so users should verify the content with official resources.
+React2Tech is an interactive React quiz application designed to help developers test and improve their React knowledge. All quiz questions and explanations are AI-generated (please verify with official resources).
+Check out our live demo at: https://react2tech.vercel.app/
 
 ---
 
