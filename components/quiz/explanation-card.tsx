@@ -11,6 +11,7 @@ interface ExplanationCardProps {
   questionNumber: number
   userAnswer: string | string[]
   isCorrect: boolean
+  level: number
 }
 
 export default function ExplanationCard({
@@ -18,6 +19,7 @@ export default function ExplanationCard({
   questionNumber,
   userAnswer,
   isCorrect,
+  level,
 }: ExplanationCardProps) {
   const { resolvedTheme } = useTheme()
   const isDarkTheme = resolvedTheme === "dark"
@@ -80,7 +82,7 @@ export default function ExplanationCard({
             )}
           </CardTitle>
           <span className="text-sm font-medium px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
-            Level {question.level}
+            Level {level}
           </span>
         </div>
         <CardDescription className="text-base font-medium mt-2">

@@ -337,6 +337,7 @@ export default function ResultsCard({
             questionNumber={questions.findIndex(q => q.id === currentQuestion.id) + 1}
             userAnswer={userAnswers[currentQuestion.id]}
             isCorrect={isCorrect(currentQuestion.id)}
+            level={level}
           />
         )}
       </div>

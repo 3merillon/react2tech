@@ -16,6 +16,7 @@ interface QuestionCardProps {
   onPrevious: () => void
   isAnswered: boolean
   isOptionSelected: (questionId: string, optionId: string) => boolean
+  level: number
 }
 
 export default function QuestionCard({
@@ -27,6 +28,7 @@ export default function QuestionCard({
   onNext,
   onPrevious,
   isOptionSelected,
+  level,
 }: QuestionCardProps) {
   // Determine if we can go to next question
   const canGoNext = question.multipleCorrect 
@@ -36,12 +38,12 @@ export default function QuestionCard({
   return (
     <Card className="w-full max-w-3xl mx-auto border-2 shadow-lg hover:shadow-xl transition-all duration-300">
       <CardHeader className="pb-2 border-b">
-        <CardTitle className="flex items-center justify-between">
-          <span className="text-xl font-bold">Question {questionIndex + 1} of {totalQuestions}</span>
-          <span className="text-sm font-medium px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
-            Level {question.level}
-          </span>
-        </CardTitle>
+      <CardTitle className="flex items-center justify-between">
+        <span className="text-xl font-bold">Question {questionIndex + 1} of {totalQuestions}</span>
+        <span className="text-sm font-medium px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+          Level {level}
+        </span>
+      </CardTitle>
         <CardDescription className="text-lg font-medium mt-4">
           {question.question}
           {question.multipleCorrect && (

@@ -282,6 +282,7 @@ export default function QuizClient({
           onPrevious={goToPreviousQuestion}
           isAnswered={false}
           isOptionSelected={isOptionSelected}
+          level={level}
         />
       )}
     </div>
